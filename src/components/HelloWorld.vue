@@ -1,38 +1,27 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div>
+    <button @click="addElement">添加元素</button>
+    <button @click="removeElement">删除元素</button>
+    <ul>
+      <li v-for="(item, index) in elements" :key="index">{{ item }}</li>
+    </ul>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      elements: ['初始元素 1', '初始元素 2']
+    };
+  },
+  methods: {
+    addElement() {
+      this.elements.push('新添加元素');
+    },
+    removeElement() {
+      this.elements.pop();
+    }
+  }
+};
+</script>
