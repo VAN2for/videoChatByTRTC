@@ -8,9 +8,9 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const roomIdT = Number(route.query.roomId);
 
-const sdkAppId=20009280;
+const sdkAppId=20022655;
 const userId=String(route.query.userId);
-const sdkSecretKey='304be4b653f1d54a6ab7199bb6d8b3ca7ccc4e4f488154492d8bb9934ec7c898';
+const sdkSecretKey='352a708f07e30c918fe120f0e8a5327c69b19b74f2eed513b3ee9c8aea0133a2';
 let userSig:any;
 let remoteUsersViews=ref<string[]>([])
 const trtc=TRTC.create();

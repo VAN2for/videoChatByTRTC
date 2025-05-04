@@ -48,8 +48,9 @@ let textList=reactive<{ from: string; value: string }[]>([
 ])
 
 
-let sdkAppId=20009280
-let sdkSecretKey='304be4b653f1d54a6ab7199bb6d8b3ca7ccc4e4f488154492d8bb9934ec7c898'
+let sdkAppId=1600085063
+console.log(sdkAppId+"这是sdkAppId")
+let sdkSecretKey='e7de5690dea59142e08f481af44f6573b5f1f551a58f91bd71cb2a9269a649f6'
 let options = {
     SDKAppID: sdkAppId // 接入时需要将0替换为您的即时通信 IM 应用的 SDKAppID
 };
