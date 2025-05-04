@@ -97,7 +97,7 @@ function handleSendText() {
     promise.then(function (imResponse) {
         // 发送成功
         console.log(imResponse+1600085063)
-        ElMessage.success(`发送成功，消息为："${inputText.value}"`);
+        ElMessage.success(`发送成功，消息为："${inputText.value}+sdkAppId为+${sdkAppId}"`);
         textList.push({
             from: userId,
             value: inputText.value,
