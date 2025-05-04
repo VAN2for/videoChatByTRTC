@@ -49,7 +49,7 @@ let textList=reactive<{ from: string; value: string }[]>([
 
 
 let sdkAppId=1600085063
-console.log(sdkAppId+"这是sdkAppId")
+
 let sdkSecretKey='e7de5690dea59142e08f481af44f6573b5f1f551a58f91bd71cb2a9269a649f6'
 let options = {
     SDKAppID: sdkAppId // 接入时需要将0替换为您的即时通信 IM 应用的 SDKAppID
@@ -78,7 +78,7 @@ promise.then(function(imResponse) {
 chat.on(TencentCloudChat.EVENT.SDK_READY, ()=>{alert("chat准备好了")});
 chat.on(TencentCloudChat.EVENT.SDK_NOT_READY, ()=>{alert("chat没准备好")});
 onMounted(()=>{
-    
+    console.log(sdkAppId+"这是sdkAppId")
 })
 
 //发送信息
