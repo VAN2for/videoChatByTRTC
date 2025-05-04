@@ -48,9 +48,9 @@ let textList=reactive<{ from: string; value: string }[]>([
 ])
 
 
-let sdkAppId=20022655;
+let sdkAppId=1600085063
 console.log(sdkAppId+"这是sdkAppId")
-let sdkSecretKey='352a708f07e30c918fe120f0e8a5327c69b19b74f2eed513b3ee9c8aea0133a2'
+let sdkSecretKey='e7de5690dea59142e08f481af44f6573b5f1f551a58f91bd71cb2a9269a649f6'
 let options = {
     SDKAppID: sdkAppId // 接入时需要将0替换为您的即时通信 IM 应用的 SDKAppID
 };
@@ -96,7 +96,7 @@ function handleSendText() {
     let promise = chat.sendMessage(message);
     promise.then(function (imResponse) {
         // 发送成功
-        console.log(imResponse)
+        console.log(imResponse+1600085063)
         ElMessage.success(`发送成功，消息为："${inputText.value}"`);
         textList.push({
             from: userId,
